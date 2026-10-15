@@ -1,0 +1,27 @@
+LP Workshop Black Friday 2026 · UPFY
+=====================================
+
+O QUE TEM AQUI
+public/workshop-black/index.html   a página inteira (CSS, JS e logo dentro do arquivo)
+
+COMO PUBLICAR (no repositório que já existe: upfy-landing-pages)
+1. Copie a pasta  public/workshop-black/  para dentro da pasta  public/  do repositório.
+2. Faça o commit na branch main. O Worker da Cloudflare publica sozinho.
+3. A página fica em:  https://lp.upfy.net.br/workshop-black/
+Não precisa de repositório novo, Worker novo nem domínio novo.
+
+O QUE A PÁGINA JÁ TRAZ
+- GTM-TH22KBV com Consent Mode v2 (tudo negado até aceitar).
+- Banner de cookies que usa a mesma chave da LP principal (upfy_consent).
+  Quem já aceitou na LP principal não vê o banner de novo.
+- Rodapé com "Preferências de cookies" e link para /privacidade.
+- Evento de clique em todos os botões do grupo VIP:
+  dataLayer.push({event:'cta_click', cta_location:'hero' | 'header' | 'monte_sua_black' | 'cta_final', lp_name:'LP Workshop Black'})
+- A tag "Meta - Evento - Contact" (acionador LC - WhatsApp, regex whatsapp\.com|wa\.me)
+  já dispara sozinha no clique, porque os botões apontam para chat.whatsapp.com.
+
+ONDE TROCAR O LINK DO GRUPO
+No fim do arquivo, no bloco CONFIGURAÇÃO:  groupUrl: 'https://chat.whatsapp.com/...'
+
+UTM SUGERIDA PARA OS ANÚNCIOS
+https://lp.upfy.net.br/workshop-black/?utm_source=meta&utm_medium=paid&utm_campaign=workshop-black-2026&utm_content={anuncio}
